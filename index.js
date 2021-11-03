@@ -6,8 +6,7 @@ async function RequestCovid19Date() {
 }
 
 async function Covid19Widget() {
-    let Data = await RequestCovid19Date()
-    let CovidData = Data[0]
+    let CovidData = (await RequestCovid19Date())[0]
     let widget = new ListWidget()
     widget.backgroundColor = new Color("#A3C2E7")
 
