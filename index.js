@@ -1,12 +1,12 @@
 const Covid19URL = "https://covid19.ddc.moph.go.th/api/Cases/today-cases-all"
 
-async function RequestCovid19Date() {
+async function RequestCovid19Data() {
     const response = new Request(Covid19URL)    
     return response.loadJSON()
 }
 
 async function Covid19Widget() {
-    let CovidData = (await RequestCovid19Date())[0]
+    let CovidData = (await RequestCovid19Data())[0]
     let widget = new ListWidget()
     widget.backgroundColor = new Color("#A3C2E7")
 
